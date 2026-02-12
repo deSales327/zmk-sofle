@@ -1,4 +1,5 @@
 name: Draw Keymap
+
 on:
   workflow_dispatch:
   push:
@@ -13,6 +14,6 @@ jobs:
     permissions:
       contents: write
     with:
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+      commit_message: "[Draw] ${{ github.event.head_commit.message || 'Update keymap drawing' }}"
       destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+      fail_on_error: true
