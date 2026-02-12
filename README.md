@@ -23,6 +23,15 @@
 
 如需3D打印的模型文件或者键盘有任何异常和故障，请联系380465425@qq.com
 
+## GitHub Actions（仅网页操作）
+
+如果您只使用 GitHub 网页（没有本地仓库），也可以正常使用 Actions：
+
+1. 打开 **Settings → Actions → General**，确保仓库允许运行工作流。
+2. 确认默认分支存在工作流文件：`.github/workflows/build.yml` 和 `.github/workflows/draw.yml`。
+3. 进入 **Actions → Build ZMK firmware → Run workflow** 手动触发一次。
+4. 如果没有出现运行记录，请检查最近一次提交是否只修改了被触发器忽略的路径。
+
 ## Sofle键位图
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)

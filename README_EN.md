@@ -22,6 +22,15 @@
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
 
+## GitHub Actions (web-only setup)
+
+If you are only using GitHub web pages (no local repository), Actions can still run:
+
+1. Open **Settings → Actions → General** and allow workflows for this repository.
+2. Confirm workflow files exist in the default branch: `.github/workflows/build.yml` and `.github/workflows/draw.yml`.
+3. Trigger manually from **Actions → Build ZMK firmware → Run workflow**.
+4. If no run appears, check whether your latest commit only changed files excluded by workflow triggers.
+
 ## Sofle Keymap
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
