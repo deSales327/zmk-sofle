@@ -10,7 +10,7 @@ manifest:
       url: https://github.com/a741725193/zmk-sofle
       revision: main
 
-    - name: nice-view-gem
+    - name: nice_view_gem
       remote: m165437
       revision: v0.3.0
 
