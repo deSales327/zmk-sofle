@@ -1,0 +1,29 @@
+name: Debug west nice-view-gem
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-build-arm:stable
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: West init + update
+        shell: bash
+        run: |
+          west init -l config
+          west update
+
+      - name: Debug nice-view-gem revision
+        shell: bash
+        run: |
+          ls -la
+          ls -la nice-view-gem || true
+          git -C nice-view-gem rev-parse HEAD
+          git -C nice-view-gem describe --tags --always || true
+          git -C nice-view-gem rev-parse --abbrev-ref HEAD || true
